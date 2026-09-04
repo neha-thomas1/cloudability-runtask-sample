@@ -1,4 +1,3 @@
-# --- Provider Configuration ---
 terraform {
   required_providers {
     aws = {
@@ -16,7 +15,6 @@ provider "aws" {
   region = var.aws_region
 }
 
-# Fetches the AWS Account ID for custom pricing (this is not completed yet)
 # data "aws_caller_identity" "current" {}
 
 # --- Network Infrastructure ---
