@@ -85,6 +85,7 @@ resource "aws_route_table_association" "public" {
 # This EC2 instance is missing the 'cost-center' tag, which should
 # cause your Cloudability policy check to fail.
 resource "aws_instance" "test_vm" {
+  count                  =  10
   ami                    = "ami-0ff8a91507f77f867" # Amazon Linux AMI (us-east-1)
   instance_type          = var.instance_type
   subnet_id              = aws_subnet.public.id
